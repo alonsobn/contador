@@ -1,0 +1,11 @@
+node_modules/
+
+uploads/documentos/**.pdf
+uploads/documentos/**.rar
+uploads/documentos/**.zip
+uploads/documentos/**.xml
+
+uploads/usuarios/**.pdf
+uploads/usuarios/**.rar
+uploads/usuarios/**.zip
+uploads/usuarios/**.xml
