@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 const Usuario = require('../models/usuario');
-const SECRET_JWT= 'EstOdeb3DeSERCompLic4d02080';
+//const SECRET_JWT= 'EstOdeb3DeSERCompLic4d02080';
 
 const validarJWT = (req, res, next) => {
 
@@ -16,7 +16,7 @@ const validarJWT = (req, res, next) => {
 
     try {
         
-        const { uid } = jwt.verify( token, SECRET_JWT );
+        const { uid } = jwt.verify( token, process.env.SECRET_JWT );
         req.uid = uid;
 
         next();

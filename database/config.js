@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
-const BD_CNN= 'mongodb+srv://mean_user:imfY766OUOl2NR5S@cluster0.uyzbe.mongodb.net/test';
+//const BD_CNN= 'mongodb+srv://mean_user:imfY766OUOl2NR5S@cluster0.uyzbe.mongodb.net/test';
 
 const dbConn = async() => {
 
 
     try {
-        await mongoose.connect(BD_CNN, 
+        await mongoose.connect(process.env.BD_CNN, 
         {
             useNewUrlParser: true, 
             useUnifiedTopology: true,

@@ -1,4 +1,4 @@
-//require('dotEnv').config();
+require('dotEnv').config();
 const path = require('path');
 const express = require('express');
 const cors = require('cors');
@@ -7,7 +7,7 @@ const { dbConn } = require('./database/config');
 //contraseña   Gs8MSl0bYYkqLufx
 const app = express();
 
-const PORT= 3000;;
+//const PORT= 3000;;
 //esto es el .env
 //PORT=3000
 //BD_CNN=mongodb+srv://mean_user:imfY766OUOl2NR5S@cluster0.uyzbe.mongodb.net/test
@@ -36,6 +36,6 @@ app.get('*', (req, res) =>{
     res.sendFile( path.resolve( __dirname, 'public/index.html' ));
 });
 
-app.listen( PORT, () => {
-    console.log('Servidor con puerto ' + PORT);
+app.listen( process.env.PORT, () => {
+    console.log('Servidor con puerto ' + process.env.PORT);
 });
